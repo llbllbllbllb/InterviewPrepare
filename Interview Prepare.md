@@ -100,6 +100,93 @@ Everyone can see it.
 
 
 
+
+
+# RESTful API
+
+##  **what is RESTFUL**
+
+**REST** : **RE**presentational **S**tate **T**ransfer
+
+**focuses on system resources(data)** and **how** state of resource should be **transported over HTTP protocol** to different clients written in different language. In RESTFUL web service HTTP methods example: GET, POST, PUT and DELETE 
+
+
+
+## **Features of Restful API?**
+
+- HTTP for client server communication
+- XML/JSON as formatting language
+- Simple URI as the address for the services
+- Stateless communication (independent calls)
+
+
+
+## **How to design good RESTFul API**
+
+- **Every input** on the server should be **validated**.
+- Input should be well-formed.
+- No sensitive data through URL.
+- For any session, the **user** should be **authenticated**.
+- Use **message format** that is **easily understood** and is required by the client.
+- **(URI)**Unified Resource Identifier **should be descriptive and easily understood**.
+
+
+
+
+
+## **Core components of the HTTP request and HTTP response?**
+
+### HTTP request
+
+- **Verb:** Includes methods like GET, PUT, POST, etc.
+- **URI**Uniform Resource Identifier for identifying the resources available on the server.
+- HTTP Version for specifying the HTTP version.
+- HTTP Request **header** for containing the information about the data.
+- HTTP Request **body** that contains the representation of the resources in use.
+
+
+
+### **HTTP Response**
+
+- **Request Code:** This contains various codes that determine the status of the server response.
+- HTTP Version for specifying the HTTP version.
+- HTTP Response **header** for containing the information about the data.
+- HTTP Response **body** that contains the representation of the resources in use.
+
+
+
+## HTTP methods
+
+- **GET:** This is a read-only operation that fetches the list of users on the server.
+- **PUT:** This operation is used for the creation of any new resource on the server.
+- **POST:** This operation is used for updating an old resource or for creating a new resource.
+- **DELETE:** As the name suggests, this operation is used for deleting any resource on the server.
+- **OPTIONS:** This operation fetches the list of any supported options of resources that are available on the server.
+
+
+
+## **Statelessness**
+
+In REST, ST itself defines State Transfer and Statelessness means **complete isolation**. This means, **the state of the client’s application is never stored on the server** and is passed on.
+
+How to be stateless?: Every client passes a ‘session identifier’ which also acts as an identifier for each session.
+
+
+
+## Difference between PUT POST
+
+PUT is idempotent meaning, invoking it any number of times will not have an impact on resources. 
+
+However, POST is not idempotent, meaning if you invoke POST multiple times it keeps creating more resources
+
+
+
+## **What is Caching?**
+
+Caching is the **process in which server response is stored** so that a cached copy can be used when required and there is **no need for generating the same response again**. This process not only **reduces the server load** but in turn increase the scalability and performance of the server. Only the client is able to cache the response and that too for a limited period of time.
+
+
+
 # Sorting Algorithms 排序
 
 ## Quick Sort 快速排序
@@ -163,7 +250,7 @@ void dfs(vector<vector<int>>& res, vector<int> cur, vector<bool> used){
 
 2. Duplicate(有重复) [1,1,2]
 
-Idea: 基于没有重复的情况下，sort nums，然后添加condition：如果nums[i] == nums[i-1]而且前面的没有用，（不在cur里），证明这个nums[i]在之前已经有一样的情况了。
+Idea: 基于没有重复的情况下，sort nums，然后添加condition：**如果nums[i] == nums[i-1]而且前面的没有用，**（不在cur里），证明这个nums[i]在之前已经有一样的情况了。
 
 如果nums[i] == nums[i-1] 而且 used[i-1] == false(不再cur里)，那nums[i-1]必然已经跑过一次并且pop掉了。
 
@@ -196,7 +283,7 @@ void dfs(vector<vector<int>>& res, vector<int> cur, vector<bool> used){
 
 
 
-## Rotate Image
+## Rotate Image / Matrix
 
 ### Clockwise(顺时针) 90 degree
 
