@@ -100,6 +100,10 @@ Everyone can see it.
 
 
 
+# MVC
+
+
+
 
 
 # RESTful API
@@ -314,4 +318,24 @@ void dfs(vector<vector<int>>& res, vector<int> cur, vector<bool> used){
 4,5,6 -> 6,5,4 ->  \  -> 2,5,8
 7,8,9    9,8,7      \    1,4,7
 ```
+
+
+
+## K-th largest in array
+
+Idea: 用priority queue, 不断push, 如果queue size大于k的话就pop, 最后return q.top
+
+```c++
+std::priority_queue<int, std::vector<int>, std::greater<int> > q;
+```
+
+Pop,top 都是最小的数。
+
+Complexity: $Nlog{k}$
+
+
+
+# JavaScript
+
+https://www.toptal.com/javascript/interview-questions
 
